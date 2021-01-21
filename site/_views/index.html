@@ -66,17 +66,17 @@
   </div>
   <div data-w-id="a1126459-59de-705e-e3bb-b9b96f6364f2" class="div-block-27">
     <div class="div-block-28">
-      <div class="w-dyn-list">
-        <div role="list" class="collection-list-5 w-dyn-items">
-          <div role="listitem" class="w-dyn-item">
-            <div class="div-block-29"><img loading="lazy" width="40" height="40" src="/static/" alt="">
-              <div class="text-block-12"></div>
+      {%- assign collectionId = "main" -%}{%- assign collection = collections["-df82a2e"][collectionId] -%}<div class="w-dyn-list">
+        {%- if collection.length > 0 -%}<div role="list" class="collection-list-5 w-dyn-items">
+          {%- for item in collection -%}<div role="listitem" class="w-dyn-item">
+            <div class="div-block-29"><img loading="lazy" width="40" height="40" src="{{ item.data.logo.url | escape }}" alt="{{ item.data.logo.alt | escape }}">
+              <div class="text-block-12">{{ item.data.name }}</div>
             </div>
-          </div>
-        </div>
-        <div class="w-dyn-empty">
+          </div>{%- endfor -%}
+        </div>{%- endif -%}
+        {%- unless collection.length > 0 -%}<div class="w-dyn-empty">
           <div>No items found.</div>
-        </div>
+        </div>{%- endunless -%}
       </div>
     </div>
   </div>
@@ -249,15 +249,15 @@
         <p class="bio-history"><strong class="bodonihero">From Fortune 500 companies and enterprise clients to small businesses and startups, meta5 </strong><strong class="bodonihero">works for everyone who uses data—and we've worked with them all.</strong></p>
       </div>
       <div id="w-node-69366611340a-775e9378" class="div-block-22">
-        <div class="collection-list-wrapper w-dyn-list">
-          <div role="list" class="collection-list-3 w-dyn-items">
-            <div role="listitem" class="w-dyn-item">
-              <div class="div-block-24"><img loading="lazy" src="/static/" alt="" class="image-2"></div>
-            </div>
-          </div>
-          <div class="w-dyn-empty">
+        {%- assign collectionId = "main" -%}{%- assign collection = collections["-3accd08c"][collectionId] -%}<div collection="Companies" class="collection-list-wrapper w-dyn-list">
+          {%- if collection.length > 0 -%}<div role="list" class="collection-list-3 w-dyn-items">
+            {%- for item in collection -%}<div role="listitem" class="w-dyn-item">
+              <div class="div-block-24"><img loading="lazy" image="Logos" src="{{ item.data.logo.url | escape }}" alt="{{ item.data.logo.alt | escape }}" class="image-2"></div>
+            </div>{%- endfor -%}
+          </div>{%- endif -%}
+          {%- unless collection.length > 0 -%}<div class="w-dyn-empty">
             <div>No items found.</div>
-          </div>
+          </div>{%- endunless -%}
         </div>
       </div>
     </div>

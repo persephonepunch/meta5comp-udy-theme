@@ -155,5 +155,23 @@
         "name"
       ]
     }
+  },
+  "-df82a2e": {
+    "collection": "sourcees"
+  },
+  "-3accd08c": {
+    "collection": "companies",
+    "query": {
+      "sort": [
+        "name"
+      ],
+      "fields": [
+        {
+          "fieldPath": "show",
+          "operatorName": "eq",
+          "value": "true"
+        }
+      ]
+    }
   }
 }
