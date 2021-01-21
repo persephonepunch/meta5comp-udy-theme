@@ -1,0 +1,87 @@
+stackbitVersion: "~0.3.0"
+ssgName: "custom"
+buildCommand: "npx @11ty/eleventy"
+publishDir: "public"
+staticDir: "static"
+uploadDir: "images"
+pagesDir: "site"
+metadata:
+  title: "meta5comp"
+  description: "Theme created in Webflow and converted with Udesly"
+models:
+  container:
+    type: "page"
+    label: "Containers"
+    urlPath: "/container/{slug}"
+  substitute:
+    type: "page"
+    label: "Substitutes"
+    urlPath: "/substitute/{slug}"
+  icons:
+    type: "page"
+    label: "Core"
+    urlPath: "/icons/{slug}"
+  conversions:
+    type: "page"
+    label: "Conversions"
+    urlPath: "/conversions/{slug}"
+  integrator:
+    type: "page"
+    label: "Integrators"
+    urlPath: "/integrator/{slug}"
+  sourcees:
+    type: "page"
+    label: "Sources"
+    urlPath: "/sourcees/{slug}"
+  search:
+    type: "page"
+    label: "Search"
+    urlPath: "/search/{slug}"
+  category:
+    type: "page"
+    label: "Blog Categories"
+    urlPath: "/category/{slug}"
+  filter:
+    type: "page"
+    label: "Filters"
+    urlPath: "/filter/{slug}"
+  regression:
+    type: "page"
+    label: "Regressions"
+    urlPath: "/regression/{slug}"
+  windows:
+    type: "page"
+    label: "Windows"
+    urlPath: "/windows/{slug}"
+  prep_sql:
+    type: "page"
+    label: "Prep SQLs"
+    urlPath: "/prep-sql/{slug}"
+  project:
+    type: "page"
+    label: "Projects"
+    urlPath: "/project/{slug}"
+  companies:
+    type: "page"
+    label: "Companies"
+    urlPath: "/companies/{slug}"
+  aggregate:
+    type: "page"
+    label: "Aggregates"
+    urlPath: "/aggregate/{slug}"
+  pc_data:
+    type: "page"
+    label: "PC Data"
+    urlPath: "/pc-data/{slug}"
+  file:
+    type: "page"
+    label: "Files"
+    urlPath: "/file/{slug}"
+  sample:
+    type: "page"
+    label: "Samples"
+    urlPath: "/sample/{slug}"
+  post:
+    type: "page"
+    label: "Blog Posts"
+    urlPath: "/post/{slug}"
